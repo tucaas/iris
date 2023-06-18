@@ -22,3 +22,21 @@ function loadScript() {
 
 // Call the loadScript function to load the API
 loadScript();
+
+// Get the current page URL
+var currentPageUrl = window.location.href;
+
+// Get the home page URL
+var homePageUrl = window.location.origin + "/index.html";
+
+// Get all the links in the header menu
+var menuLinks = document.querySelectorAll(".header-menu a");
+
+// Iterate through the menu links
+menuLinks.forEach(function (link) {
+  // Check if the link's href matches the current page URL and is not the home page URL
+  if (link.href === currentPageUrl && link.href !== homePageUrl) {
+    // Add the "active" class to the link
+    link.classList.add("active");
+  }
+});

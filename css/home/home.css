@@ -127,7 +127,7 @@ main {
 }
 
 .partners li:nth-child(n + 2) {
-  border-left: 6px solid var(--c2);
+  border-left: 6px solid var(--c3);
 }
 
 .partners-end {

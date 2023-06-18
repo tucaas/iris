@@ -101,7 +101,7 @@
   width: 200px;
   height: 16px;
   background: url("../../img/icons/border-img-top.svg") no-repeat center;
-  top: -2%;
+  top: -3%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -112,7 +112,7 @@
   width: 200px;
   height: 16px;
   background: url("../../img/icons/border-img-bottom.svg") no-repeat center;
-  top: 102%;
+  top: 103%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
