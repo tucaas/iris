@@ -49,6 +49,10 @@
   font: 400 1rem "Philosopher";
 }
 
+.font-2-xxs {
+  font: 400 0.625rem "Philosopher";
+}
+
 @media (max-width: 600px) {
   .font-2-xl {
     font-size: 2.5rem;

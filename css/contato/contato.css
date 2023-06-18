@@ -132,6 +132,7 @@ input::placeholder {
 @media (max-width: 600px) {
   .social-links {
     gap: 40px;
+    align-items: center;
   }
   .social-links p {
     display: none;
