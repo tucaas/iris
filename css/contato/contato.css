@@ -1,0 +1,139 @@
+.form-title h2 {
+  padding: 40px 0px 0px 0px;
+}
+
+.form-bg {
+  background: var(--c9);
+}
+
+.form {
+  padding: 24px 0px 48px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  font: 400 1rem/1.5 "Philosopher", sans-serif;
+  background: var(--c6);
+  border: 1px solid var(--c7);
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form textarea {
+  height: 200px;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--c6);
+  background: var(--c2);
+  box-shadow: 0 0 0 2px var(--c2);
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--c12);
+  font: 600 1rem "Philosopher", sans-serif;
+}
+
+.name {
+  padding: 40px 40px 0 40px;
+}
+.email,
+.message {
+  padding: 12px 40px 0 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--c2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: var(--c9);
+  font: 900 1.125rem/1.35 "Philosopher", sans-serif;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+  margin: 16px 0 0 40px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.button:hover {
+  padding: 12px 36px;
+  background: var(--c1);
+}
+
+.button:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 26px;
+  background-image: url("../../img/icons/btn-b.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 26px;
+  background-image: url("../../img/icons/btn-a.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover::before {
+  left: 8px;
+}
+.button:hover::after {
+  right: 8px;
+}
+
+.social h2 {
+  padding: 0 0 24px 40px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 0px 40px 0px;
+  gap: 60px;
+  justify-content: center;
+}
+
+.social-links li a {
+  padding-left: 0px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-contato {
+  padding: 32px;
+}
+
+@media (max-width: 600px) {
+  .social-links {
+    gap: 40px;
+  }
+  .social-links p {
+    display: none;
+  }
+}

@@ -1,0 +1,86 @@
+.orcamento-info-bg {
+  background-color: var(--c2);
+  position: relative;
+  overflow: hidden;
+}
+
+.orcamento-title h3 {
+  padding: 32px;
+}
+
+.orcamento-info-bg::before {
+  content: "";
+  position: absolute;
+  top: -24%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2562px;
+  height: 418px;
+  background-image: url("../../img/icons/orcamento-pattern-1.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+.orcamento-info-bg::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2562px;
+  height: 418px;
+  background-image: url("../../img/icons/orcamento-pattern-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.orcamento-info-bg::after {
+  background-image: url("../../img/icons/orcamento-pattern-2.svg");
+  background-repeat: no-repeat;
+}
+
+.orcamento-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 60px;
+  padding: 240px 0 240px 0;
+}
+
+.orcamento-txt-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+
+.orcamento-txt {
+  position: relative;
+  text-align: center;
+  max-width: 300px;
+}
+
+.orcamento-icon {
+  position: absolute;
+  right: 45%;
+  top: -1%;
+}
+
+@media (max-width: 1020px) {
+  .orcamento-info-bg::before {
+    top: -10%;
+  }
+}
+
+@media (max-width: 660px) {
+  .orcamento-info-bg::before {
+    top: -3%;
+  }
+  .orcamento-info-bg::after {
+    top: 79%;
+  }
+}

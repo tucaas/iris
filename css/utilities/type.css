@@ -1,0 +1,64 @@
+.font-1-xxl {
+  font: 400 4rem "Amarante";
+}
+
+.font-1-xl {
+  font: 400 3rem "Amarante";
+}
+
+.font-1-l {
+  font: 400 2.25rem "Amarante";
+}
+
+.font-1-m {
+  font: 400 1.5rem "amarante";
+}
+
+.font-1-s {
+  font: 400 1.25rem "Amarante";
+}
+
+.font-2-xl {
+  font: 400 3rem "Philosopher";
+  letter-spacing: 5%;
+}
+
+.font-2-l {
+  font: 700 2rem "Philosopher";
+}
+
+.font-2-ml {
+  font: 700 1.75rem "Philosopher";
+}
+
+.font-2-m {
+  font: 400 1.5rem "Philosopher";
+}
+
+.font-2-s {
+  font: 400 1.25rem "Philosopher";
+}
+
+.font-2-sb {
+  font: 700 1.25rem/2rem "Philosopher";
+  letter-spacing: 5%;
+  text-indent: 28px;
+}
+
+.font-2-xs {
+  font: 400 1rem "Philosopher";
+}
+
+@media (max-width: 600px) {
+  .font-2-xl {
+    font-size: 2.5rem;
+  }
+  .font-1-xxl {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  .font-2-xl {
+    font-size: 1.75rem;
+  }
+}

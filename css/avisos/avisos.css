@@ -1,0 +1,68 @@
+.antes h3,
+.depois h3 {
+  text-align: center;
+  padding: 80px 40px 40px 40px;
+}
+
+.antes-bg {
+  background: var(--c2);
+  background-image: url("../../img/icons/pattern-antes.svg");
+}
+
+.depois-bg {
+  background: var(--c5);
+  background-image: url("../../img/icons/pattern-depois.svg");
+}
+
+.antes {
+  background-color: var(--c2);
+}
+
+.depois {
+  background-color: var(--c5);
+}
+
+.antes,
+.depois {
+  margin: -55px auto;
+}
+
+.antes-list,
+.depois-list {
+  padding: 0 12px 52px 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.antes-list li,
+.depois-list li {
+  margin-bottom: 28px;
+}
+
+.antes-list li::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/icons/li-before-b.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1.5%;
+}
+
+.depois-list li::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/icons/li-before.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1.5%;
+}
+
+@media (max-width: 400px) {
+  .antes-list li::before,
+  .depois-list li::before {
+    left: 3.5%;
+  }
+}

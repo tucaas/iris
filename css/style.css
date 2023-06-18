@@ -1,0 +1,10 @@
+@import "./global/global.css";
+
+@import "./home/home.css";
+@import "./orcamentos/orcamentos.css";
+@import "./atendimento/atendimento.css";
+@import "./avisos/avisos.css";
+@import "./contato/contato.css";
+
+@import "./utilities/type.css";
+@import "./utilities/cor.css";
