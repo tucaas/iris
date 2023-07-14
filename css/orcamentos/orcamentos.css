@@ -4,8 +4,8 @@
   overflow: hidden;
 }
 
-.orcamento-title h3 {
-  padding: 32px;
+.orcamento-title p {
+  padding: 48px;
 }
 
 .orcamento-info-bg::before {

@@ -4,7 +4,7 @@
 }
 
 .atendimento-title p {
-  padding: 32px;
+  padding: 48px;
 }
 
 .map {
@@ -148,7 +148,7 @@
 @media (max-width: 2560px) {
   .map-mbd {
     width: 90%;
-    height: 300px;/
+    height: 300px;
   }
 }
 

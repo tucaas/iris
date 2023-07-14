@@ -86,6 +86,122 @@ main {
   mix-blend-mode: darken;
 }
 
+.pic-3 {
+ width: 250px;
+ height: 250px;
+ border: 1px solid var(--c2);
+ background-color: var(--c1);
+}
+
+.pic-3 img {
+  max-width: 100%;
+}
+
+.avisos-flash {
+  display: flex;
+  padding: 20px 48px;
+  gap: 140px;
+}
+
+.avisos-flash p {
+  position: relative;
+}
+
+.avisos-flash p::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/icons/li-before-b.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: .5%;
+}
+
+.flashs-bg {
+  background-image: url("../../img/icons/flashs-bg.png");
+  background-size: contain;
+}
+
+.flashs h2 {
+  text-align: center;
+  padding: 40px;
+}
+
+.flashs-grid {
+  padding: 0 0 40px 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 32px 80px;
+  flex-wrap: wrap;
+}
+
+.flash {
+  display: grid;
+  gap: 4px;
+}
+
+.flash-txt {
+  display: flex;
+  width: 252px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flash-btn {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: var(--c2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: var(--c9);
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.flash-btn:hover {
+  padding: 15px 36px;
+  background: var(--c3);
+}
+
+.flash-btn:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 26px;
+  background-image: url("../../img/icons/btn-b.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flash-btn:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 26px;
+  background-image: url("../../img/icons/btn-a.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flash-btn:hover::before {
+  left: 8px;
+}
+.flash-btn:hover::after {
+  right: 8px;
+}
+
 .partners-bg {
   background: var(--c1);
 }
@@ -250,6 +366,10 @@ main {
   }
   .end-img img {
     overflow: hidden;
+  }
+  .avisos-flash {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 

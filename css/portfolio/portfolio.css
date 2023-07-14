@@ -1,0 +1,53 @@
+.portfolio-bg {
+  background: var(--c9);
+  text-align: center;
+  background-image: url("../../img/icons/sobre-bg.png");
+}
+
+.port-grid {
+  padding: 40px 0 40px 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 80px 80px;
+  flex-wrap: wrap;
+}
+
+.pic-4 {
+  width: 250px;
+  height: 250px;
+  border: 6px solid var(--c1);
+  background-color: var(--c2);
+ }
+
+ .pic-4 img {
+  max-width: 100%;
+}
+
+.border3 {
+  position: relative;
+}
+
+.border3::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 16px;
+  background: url("../../img/icons/border-img-top.svg") no-repeat center;
+  top: -1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.border3::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 16px;
+  background: url("../../img/icons/border-img-bottom.svg") no-repeat center;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
