@@ -67,18 +67,36 @@
     <div class="separator-1"><img src="./img/icons/separator-1.svg" alt=""></div>
     <article class="pres-1 container">
       <div class="info-grid">
-        <div class="pic-grid">
-          <div class="pic">
-            <img src="./img/tattoo spider.png" alt="">
+        <div class="pics">
+          <div class="pic-grid">
+            <div class="pic">
+              <img src="./img/tattoo-arn.png" alt="" onclick="toggleOverlay1(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/tattoo-mao.png" alt="" onclick="toggleOverlay1(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/tattoo-flr.png" alt="" onclick="toggleOverlay1(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/tattoo-abl.png" alt="" onclick="toggleOverlay1(this)">
+            </div>
           </div>
-          <div class="pic">
-            <img src="./img/tatto hand.png" alt="">
-          </div>
-          <div class="pic">
-            <img src="./img/tattoo floral.png" alt="">
-          </div>
-          <div class="pic">
-            <img src="./img/tattoo bee.png" alt="">
+          <div class="pic-grid-overlay" id="overlay">
+            <div class="pic-overlay1">
+              <img src="./img/tattoo-arn.png" alt="">
+            </div>
+            <div class="thumbs">
+              <div class="pic thumb">
+                <img src="./img/tattoo-mao.png" alt="" onclick="toggleOverlay1(this)">
+              </div>
+              <div class="pic thumb">
+                <img src="./img/tattoo-flr.png" alt="" onclick="toggleOverlay1(this)">
+              </div>
+              <div class="pic thumb">
+                <img src="./img/tattoo-abl.png" alt="" onclick="toggleOverlay1(this)">
+              </div>
+            </div>
           </div>
         </div>
         <div class="txt1">
@@ -98,18 +116,36 @@
         <div class="txt2">
           <p class="font-2-xl c1">Gosto muito também de ouvir as ideias de meus clientes e trabalhar em cima delas, e criar uma arte que é única para cada pessoa!</p>
         </div>
-        <div class="pic-grid">
-          <div class="pic">
-            <img src="./img/neck 3.png" alt="">
+        <div class="pics">
+          <div class="pic-grid2">
+            <div class="pic">
+              <img src="./img/iris-4.png" alt="" onclick="toggleOverlay2(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/iris-2.png" alt="" onclick="toggleOverlay2(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/iris-3.png" alt="" onclick="toggleOverlay2(this)">
+            </div>
+            <div class="pic">
+              <img src="./img/iris-1.png" alt="" onclick="toggleOverlay2(this)">
+            </div>
           </div>
-          <div class="pic">
-            <img src="./img/neck 4.png" alt="">
-          </div>
-          <div class="pic">
-            <img src="./img/stencil.png" alt="">
-          </div>
-          <div class="pic">
-            <img src="./img/reco.png" alt="">
+          <div class="pic-grid-overlay2" id="overlay2">
+            <div class="pic-overlay2">
+              <img src="./img/iris-4.png" alt="">
+            </div>
+            <div class="thumbs">
+              <div class="pic thumb2">
+                <img src="./img/iris-2.png" alt="" onclick="toggleOverlay2(this)">
+              </div>
+              <div class="pic thumb2">
+                <img src="./img/iris-3.png" alt="" onclick="toggleOverlay2(this)">
+              </div>
+              <div class="pic thumb2">
+                <img src="./img/iris-1.png" alt="" onclick="toggleOverlay2(this)">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -117,115 +153,118 @@
     <div class="separator-2"><img src="./img/icons/separator-2.svg" alt=""></div>
   </section>
 
-<section class="flashs-bg">
-<article class="flashs">
-  <h2 class="font-1-xxl c9">FLASHES</h2>
-  <div class="container2">
-    <div class="avisos-flash">
-      <p class="font-2-sb c9">Os desenhos podem sofrer pequenas de acordo com o seu gosto!</p>
-      <p class="font-2-sb c9">Os preços e tamanhos que estão nesta lista são sugestões proporcionais</p>
-    </div>
-    <ul class="flashs-grid">
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-amz.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>20cm</p>
-            <p>R$700</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Amazona%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
+  <section class="flashs-bg">
+    <article class="flashs">
+      <h2 class="font-1-xxl c9">FLASHES</h2>
+      <div class="container2">
+        <div class="avisos-flash">
+          <p class="font-2-sb c9">Os desenhos podem sofrer pequenas de acordo com o seu gosto!</p>
+          <p class="font-2-sb c9">Os preços e tamanhos que estão nesta lista são sugestões proporcionais</p>
         </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-brx.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>20cm</p>
-            <p>R$700</p>
+        <ul class="flashs-grid">
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-amz.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>20cm</p>
+                <p>R$700</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Amazona%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-brx.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>20cm</p>
+                <p>R$700</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Bruxa%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-cvl.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>10cm</p>
+                <p>R$350</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Cavalo%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-dmn.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>10cm</p>
+                <p>R$400</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20do%20Dem%C3%B4nio%20Tarot%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-dmn2.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>7cm</p>
+                <p>R$280</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Dem%C3%B4nio%20Linguarudo%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele" target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-fda.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>15cm</p>
+                <p>R$600</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Fada%20Art%20Nouveau%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-jnh.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>7cm</p>
+                <p>R$250</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Joaninha%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele" target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <li class="flash">
+            <div class="pic-3"><img src="./img/flash-sra.png" alt=""></div>
+            <div class="font-1-m c9 flash-txt">
+              <div>
+                <p>25cm</p>
+                <p>R$800</p>
+              </div>
+              <div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Sereia%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
+              </div>
+            </div>
+          </li>
+          <div class="flash-overlay">
+            <img src="./img/flash-amz.png" alt="">
           </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Bruxa%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-cvl.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>10cm</p>
-            <p>R$350</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Cavalo%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-dmn.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>10cm</p>
-            <p>R$400</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20do%20Dem%C3%B4nio%20Tarot%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-dmn2.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>7cm</p>
-            <p>R$280</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Dem%C3%B4nio%20Linguarudo%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele" target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-fda.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>15cm</p>
-            <p>R$600</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Fada%20Art%20Nouveau%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-jnh.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>7cm</p>
-            <p>R$250</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Joaninha%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele" target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-      <li class="flash">
-        <div class="pic-3"><img src="./img/flash-sra.png" alt=""></div>
-        <div class="font-1-m c9 flash-txt">
-          <div>
-            <p>25cm</p>
-            <p>R$800</p>
-          </div>
-          <div>
-            <a href="https://api.whatsapp.com/send/?phone=%2B554896425288&text=Ooooi,%20tudo%20bem?%20Eu%20vi%20o%20flash%20da%20Sereia%20no%20seu%20site%20e%20gostaria%20de%20reservar%20ele." target="_blank" class="flash-btn font-1-m c9">reservar</a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</article>
-</section>
+        </ul>
+      </div>
+    </article>
+  </section>
 
   <section class="partners-bg">
     <article class="partners container">

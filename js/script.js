@@ -40,3 +40,166 @@ menuLinks.forEach(function (link) {
     link.classList.add("active");
   }
 });
+
+function toggleOverlay1(img) {
+  var overlayImage = document.querySelector(".pic-overlay1 img");
+  var thumbImages = document.querySelectorAll(".thumb img");
+
+  // Store the source of the clicked image
+  var clickedImageSrc = img.src;
+
+  // Find the matching thumb image with the same source as the clicked image
+  var matchingThumb = Array.from(thumbImages).find(function (thumb) {
+    return thumb.src === clickedImageSrc;
+  });
+
+  // If a matching thumb image is found, swap its source with the overlay image source
+  if (matchingThumb) {
+    var thumbImageSrc = overlayImage.src;
+    overlayImage.src = clickedImageSrc;
+    matchingThumb.src = thumbImageSrc;
+  }
+
+  var grid = document.querySelector(".pic-grid");
+  var overlay = document.getElementById("overlay");
+
+  grid.style.display = "none";
+  overlay.style.display = "flex";
+}
+
+function hideOverlay1() {
+  var grid = document.querySelector(".pic-grid");
+  var overlay = document.getElementById("overlay");
+
+  grid.style.display = "flex";
+  overlay.style.display = "none";
+}
+
+window.addEventListener("click", function (event) {
+  var grid = document.querySelector(".pic-grid");
+  var overlay = document.getElementById("overlay");
+
+  if (!overlay.contains(event.target) && !grid.contains(event.target)) {
+    hideOverlay();
+  }
+});
+
+function toggleOverlay2(img) {
+  // New function for the second section (pic-grid2 and pic-grid-overlay2)
+  var overlayImage = document.querySelector(".pic-overlay2 img");
+  var thumbImages = document.querySelectorAll(".thumb2 img");
+
+  // Store the source of the clicked image
+  var clickedImageSrc = img.src;
+
+  // Find the matching thumb image with the same source as the clicked image
+  var matchingThumb = Array.from(thumbImages).find(function (thumb) {
+    return thumb.src === clickedImageSrc;
+  });
+
+  // If a matching thumb image is found, swap its source with the overlay image source
+  if (matchingThumb) {
+    var thumbImageSrc = overlayImage.src;
+    overlayImage.src = clickedImageSrc;
+    matchingThumb.src = thumbImageSrc;
+  }
+
+  var grid = document.querySelector(".pic-grid2");
+  var overlay = document.getElementById("overlay2");
+
+  grid.style.display = "none";
+  overlay.style.display = "flex";
+}
+
+function hideOverlay2() {
+  // New function for the second section (pic-grid2 and pic-grid-overlay2)
+  var grid = document.querySelector(".pic-grid2");
+  var overlay = document.getElementById("overlay2");
+
+  grid.style.display = "flex";
+  overlay.style.display = "none";
+}
+
+window.addEventListener("click", function (event) {
+  // Existing event listener for the first section (pic-grid and pic-grid-overlay)
+  var grid = document.querySelector(".pic-grid");
+  var overlay = document.getElementById("overlay");
+
+  if (!overlay.contains(event.target) && !grid.contains(event.target)) {
+    hideOverlay1();
+  }
+
+  // New event listener for the second section (pic-grid2 and pic-grid-overlay2)
+  var grid2 = document.querySelector(".pic-grid2");
+  var overlay2 = document.getElementById("overlay2");
+
+  if (!overlay2.contains(event.target) && !grid2.contains(event.target)) {
+    hideOverlay2();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const flashOverlay = document.querySelector(".flash-overlay");
+  const flashImages = document.querySelectorAll(".flash img");
+
+  // Function to open the overlay and display the clicked image
+  function openOverlay(imageSrc) {
+    flashOverlay.style.display = "block";
+    flashOverlay.querySelector("img").src = imageSrc;
+  }
+
+  // Function to close the overlay
+  function closeOverlay() {
+    flashOverlay.style.display = "none";
+    flashOverlay.querySelector("img").src = "";
+  }
+
+  // Event listener for clicking on a flash image
+  flashImages.forEach((image) => {
+    image.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the click from bubbling up to the window
+      const imageSrc = image.getAttribute("src");
+      openOverlay(imageSrc);
+    });
+  });
+
+  // Event listener for clicking outside the overlay to close it
+  window.addEventListener("click", function (event) {
+    if (!flashOverlay.contains(event.target)) {
+      closeOverlay();
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const portOverlay = document.querySelector(".port-overlay");
+  const portImages = document.querySelectorAll(".port img");
+
+  // Function to open the overlay and display the clicked image
+  function openOverlay(imageSrc) {
+    portOverlay.style.display = "block";
+    portOverlay.querySelector("img").src = imageSrc;
+  }
+
+  // Function to close the overlay
+  function closeOverlay() {
+    portOverlay.style.display = "none";
+    portOverlay.querySelector("img").src = "";
+  }
+
+  // Event listener for clicking on a port image
+  portImages.forEach((image) => {
+    image.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the click from bubbling up to the window
+      const imageSrc = image.getAttribute("src");
+      openOverlay(imageSrc);
+    });
+  });
+
+  // Event listener for clicking outside the overlay to close it
+  window.addEventListener("click", function (event) {
+    if (!portOverlay.contains(event.target)) {
+      closeOverlay();
+    }
+  });
+});

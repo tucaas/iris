@@ -12,6 +12,23 @@
   justify-content: center;
   gap: 80px 80px;
   flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.port-overlay {
+  display: none;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  border: 6px solid var(--c2);
+  z-index: 9999;
+}
+
+.port-overlay img {
+  max-width: 100%;
 }
 
 .pic-4 {
@@ -19,10 +36,16 @@
   height: 250px;
   border: 6px solid var(--c1);
   background-color: var(--c2);
- }
+  overflow: hidden;
+}
 
- .pic-4 img {
+.pic-4 img {
   max-width: 100%;
+  transition: 0.3s;
+}
+
+.pic-4 img:hover {
+  transform: scale(1.15);
 }
 
 .border3 {
