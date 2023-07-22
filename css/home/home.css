@@ -283,8 +283,11 @@ main {
   background-color: var(--c1);
   background-image: url("../../img/icons/flashs-bg.png");
   background-size: contain;
-  width: 800px;
-  height: 800px;
+  max-width: 650px;
+  max-height: 650px;
+  min-height: 300px;
+  min-width: 300px;
+  /* padding: 12px; */
   border: 6px solid var(--c2);
 }
 .flash-overlay img {
@@ -444,6 +447,15 @@ main {
 }
 
 @media (max-width: 970px) {
+  .flash-overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+
   .partners li:first-child,
   .partners li:last-child {
     border-left: none;

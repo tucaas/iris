@@ -203,3 +203,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const portOverlay = document.querySelector(".port-overlay");
+  const portImage = document.querySelector(".port-overlay img");
+
+  // Function to open the overlay and display the clicked image
+  function openOverlay(imageSrc) {
+    portOverlay.style.display = "block";
+    portImage.src = imageSrc;
+  }
+
+  // Function to close the overlay
+  function closeOverlay() {
+    portOverlay.style.display = "none";
+    portImage.src = "";
+  }
+
+  // Function to scale the image based on the mouse position
+  function scaleImage(event) {
+    const rect = portOverlay.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+
+    const scaleRatioX = mouseX / rect.width;
+    const scaleRatioY = mouseY / rect.height;
+
+    portImage.style.transformOrigin = `${scaleRatioX * 100}% ${
+      scaleRatioY * 100
+    }%`;
+    portImage.style.transform = `scale(1.5)`;
+  }
+
+  // Event listener for clicking on a port image
+  portImage.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent the click from bubbling up to the window
+    closeOverlay();
+  });
+
+  // Event listener for clicking on the overlay to close it
+  portOverlay.addEventListener("click", function () {
+    closeOverlay();
+  });
+
+  // Event listener for mousemove to scale the image when hovering over the overlay
+  portOverlay.addEventListener("mousemove", function (event) {
+    scaleImage(event);
+  });
+
+  // Event listener to reset the image scaling when the mouse leaves the overlay
+  portOverlay.addEventListener("mouseleave", function () {
+    portImage.style.transform = "scale(1)";
+  });
+});
