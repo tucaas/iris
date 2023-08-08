@@ -15,24 +15,46 @@
   overflow: hidden;
 }
 
-.port-overlay {
+.port-overlay-wrapper {
   display: none;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.port-overlay-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.port-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 800px;
-  max-height: 800px;
-  min-height: 300px;
-  min-width: 300px;
-  transition: 0.3s;
+  width: 800px;
+  height: 800px;
   border: 6px solid var(--c2);
   overflow: hidden;
-  z-index: 9999;
+  z-index: 2;
+  background-color: white;
 }
 
 .port-overlay img {
   max-width: 100%;
+  max-height: 100%;
   transition: 0.3s;
 }
 
@@ -84,6 +106,35 @@
   z-index: 0;
 }
 
+@media (max-width: 1550px) {
+  .border3::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 16px;
+    background: url("../../img/icons/border-img-bottom.svg") no-repeat center;
+    top: 101%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .port-overlay {
+    display: flex;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    max-height: 600px;
+    min-height: 300px;
+    min-width: 300px;
+    transition: 0.3s;
+    border: 6px solid var(--c2);
+    overflow: hidden;
+    z-index: 9999;
+  }
+}
+
 @media (max-width: 1000px) {
   .pic-4 {
     width: 150px;
@@ -112,11 +163,26 @@
   .port-grid {
     gap: 32px;
   }
+  .port-overlay {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .port-overlay {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @media (max-width: 430px) {
   .port-grid {
     gap: 16px 8px;
+  }
+  .port-overlay {
+    width: 300px;
+    height: 300px;
   }
 }
 

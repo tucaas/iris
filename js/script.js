@@ -140,18 +140,19 @@ window.addEventListener("click", function (event) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const flashOverlay = document.querySelector(".flash-overlay");
+  const flashOverlayContent = document.querySelector(".flash-overlay-content");
   const flashImages = document.querySelectorAll(".flash img");
 
   // Function to open the overlay and display the clicked image
   function openOverlay(imageSrc) {
     flashOverlay.style.display = "block";
-    flashOverlay.querySelector("img").src = imageSrc;
+    flashOverlayContent.querySelector("img").src = imageSrc;
   }
 
   // Function to close the overlay
   function closeOverlay() {
     flashOverlay.style.display = "none";
-    flashOverlay.querySelector("img").src = "";
+    flashOverlayContent.querySelector("img").src = "";
   }
 
   // Event listener for clicking on a flash image
@@ -163,49 +164,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Event listener for clicking outside the overlay to close it
-  window.addEventListener("click", function (event) {
-    if (!flashOverlay.contains(event.target)) {
+  // Event listener for clicking outside the overlay content to close it
+  flashOverlay.addEventListener("click", function (event) {
+    if (!flashOverlayContent.contains(event.target)) {
       closeOverlay();
     }
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const portOverlay = document.querySelector(".port-overlay");
+  const portOverlay = document.querySelector(".port-overlay-wrapper");
   const portImages = document.querySelectorAll(".port img");
-
-  // Function to open the overlay and display the clicked image
-  function openOverlay(imageSrc) {
-    portOverlay.style.display = "block";
-    portOverlay.querySelector("img").src = imageSrc;
-  }
-
-  // Function to close the overlay
-  function closeOverlay() {
-    portOverlay.style.display = "none";
-    portOverlay.querySelector("img").src = "";
-  }
-
-  // Event listener for clicking on a port image
-  portImages.forEach((image) => {
-    image.addEventListener("click", function (event) {
-      event.stopPropagation(); // Prevent the click from bubbling up to the window
-      const imageSrc = image.getAttribute("src");
-      openOverlay(imageSrc);
-    });
-  });
-
-  // Event listener for clicking outside the overlay to close it
-  window.addEventListener("click", function (event) {
-    if (!portOverlay.contains(event.target)) {
-      closeOverlay();
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const portOverlay = document.querySelector(".port-overlay");
   const portImage = document.querySelector(".port-overlay img");
 
   // Function to open the overlay and display the clicked image
@@ -218,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeOverlay() {
     portOverlay.style.display = "none";
     portImage.src = "";
+    portImage.style.transform = "scale(1)"; // Reset image scaling
   }
 
   // Function to scale the image based on the mouse position
@@ -236,9 +206,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listener for clicking on a port image
-  portImage.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent the click from bubbling up to the window
-    closeOverlay();
+  portImages.forEach((image) => {
+    image.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the click from bubbling up to the window
+      const imageSrc = image.getAttribute("src");
+      openOverlay(imageSrc);
+    });
+  });
+
+  // Event listener for clicking outside the overlay to close it
+  window.addEventListener("click", function (event) {
+    if (!portOverlay.contains(event.target)) {
+      closeOverlay();
+    }
   });
 
   // Event listener for clicking on the overlay to close it

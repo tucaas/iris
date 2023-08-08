@@ -279,16 +279,29 @@ main {
 
 .flash-overlay {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Darkened background */
+  z-index: 2;
+}
+
+.flash-overlay-content {
   position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--c1);
   background-image: url("../../img/icons/flashs-bg.png");
   background-size: contain;
-  max-width: 650px;
-  max-height: 650px;
+  max-width: 600px;
+  max-height: 600px;
   min-height: 300px;
   min-width: 300px;
-  /* padding: 12px; */
   border: 6px solid var(--c2);
+  z-index: 3; /* Displayed above the dark background */
 }
 .flash-overlay img {
   max-width: 100%;
