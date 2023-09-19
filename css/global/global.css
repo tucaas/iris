@@ -97,7 +97,7 @@ a {
 
 .header-menu a {
   white-space: nowrap;
-  padding: 25px 30px;
+  padding: 20px 18px;
   /* gap: 20px; */
   transition: 0.4s;
   position: relative;
@@ -115,7 +115,7 @@ a {
   height: 4px;
   width: 0;
   background: var(--c1);
-  margin-top: 5px;
+  margin-top: 2px;
   left: 12px;
   transition: opacity 0.4s, transform 0.4s;
   position: absolute;
